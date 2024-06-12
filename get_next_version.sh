@@ -6,7 +6,7 @@ git fetch --tags
 # Get the latest tag and split it into components
 latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1) 2>/dev/null)
 if [ -z "$latest_tag" ]; then
-  latest_tag="0.0.0"
+  latest_tag="1.0.0"
 fi
 IFS='.' read -r -a version_parts <<< "$latest_tag"
 
